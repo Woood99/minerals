@@ -1,34 +1,35 @@
 // main
-$fontFamily: "asd";
-$fontSize: 14;
+$fontFamily: "Roboto";
+$fontSize: 20;
 $minWidth: 320;
 $maxWidth: 1920;
-$contentWidth: 1170;
+$contentWidth: 1600;
 $containerOffset: 15;
 $containerWidth: calc($contentWidth + ($containerOffset * 2));
 
 // main colors
-$bodyColor: #fff; // Цвет body по умолчаниюу
-$mainColor: #000; // Цвет шрифта по умолчанию
+$bodyColor: #689ed4; // Цвет body по умолчаниюу
+$mainColor: #fff; // Цвет шрифта по умолчанию
+
+$bodyColorSecondary: #f1f4f8;
+$mainColorSecondary: #405267;
 
 :root {
 
     // additional colors
     --black-color: #000;
+    --black-secondary-color: #102441;
     --white-color: #fff;
-
-    // z-index
-    --index-minus: -1;
-    --index-min: 5;
-    --index-optimum: 10;
-    --index-max: 15;
+    --periw-gray-color: #C8D7EB;
+    --blue-color: #2797FF;
+    --gray-color: #7E8888;
 }
 
 
 
 // others vars
-$transitionSpeed: 0.3s;
-$transitionFunction: ease-in-out;
+$transitionSpeed: 0.25s;
+$transitionFunction: ease-out;
 
 
 // break points

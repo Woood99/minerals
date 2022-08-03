@@ -32,16 +32,22 @@ p {
     margin: 0;
     min-width: $minWidth + px;
     min-height: 100%;
-    font-size: $fontSize + px;
+    @include adaptiveValue("font-size", $fontSize, 14);
     line-height: 100%;
     background-color: $bodyColor;
     color: $mainColor;
+
+    &--secondary {
+        background-color: $bodyColorSecondary;
+        color: $mainColorSecondary;
+    }
 }
 
 img {
     height: auto;
     max-width: 100%;
     object-fit: cover;
+    display: block;
 }
 
 a {
