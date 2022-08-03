@@ -1,0 +1,42 @@
+.our-prices {
+    background-color: #12161C;
+    padding: 14px 0 15px;
+
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        font-size: 16px;
+
+        span {
+            margin-left: 3px;
+            display: inline-block;
+        }
+
+        &:not(:first-child) {
+            margin-left: 97px;
+        }
+
+        @media (max-width:$desktop) {
+            font-size: 14px;
+
+            &:not(:first-child) {
+                margin-left: 65px;
+            }
+        }
+
+        &--up {
+            span {
+                color: var(--green-color);
+            }
+        }
+
+        &--down {
+            span {
+                color: var(--red-color);
+            }
+        }
+    }
+}

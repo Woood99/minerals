@@ -23,6 +23,8 @@ $mainColorSecondary: #405267;
     --periw-gray-color: #C8D7EB;
     --blue-color: #2797FF;
     --gray-color: #7E8888;
+    --green-color: #28DF71;
+    --red-color: #E01E3C;
 }
 
 
@@ -33,7 +35,8 @@ $transitionFunction: ease-out;
 
 
 // break points
-$desktop: $containerWidth+px;
+
+$desktop: calc($containerWidth - ($containerOffset * 2))+px;
 $tablet: 1024px;
 $smallTablet: 768px;
 $mobile: 576px;
