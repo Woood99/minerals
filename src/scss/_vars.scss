@@ -37,6 +37,7 @@ $transitionFunction: ease-out;
 // break points
 
 $desktop: calc($containerWidth - ($containerOffset * 2))+px;
+$md1300: 1300px;
 $tablet: 1024px;
 $smallTablet: 768px;
 $mobile: 576px;

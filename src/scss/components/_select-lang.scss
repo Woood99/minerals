@@ -1,0 +1,132 @@
+.select-lang {
+
+    &__title {
+        position: relative;
+        padding-left: 27px;
+        padding-right: 17px;
+        color: inherit;
+        font-size: 18px;
+        line-height: math.div(21, 18);
+
+        &.flag--russian {
+            &::before {
+                background-image: url('../img/flag--rus.svg');
+            }
+        }
+
+        &.flag--english {
+            &::before {
+                background-image: url('../img/flag--english.png');
+            }
+        }
+
+        &.flag--spanish {
+            &::before {
+                background-image: url('../img/flag--spanish.png');
+            }
+        }
+
+        @media (max-width:$tablet) {
+            font-size: 14px;
+        }
+
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 17px;
+            height: 17px;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-image: url('../img/arrow-down.svg');
+            background-repeat: no-repeat;
+            width: 7px;
+            height: 4px;
+            right: 0;
+            transition: transform $transitionSpeed $transitionFunction;
+        }
+
+        &.is-open {
+            &::after {
+                transform: translateY(-50%) rotate(180deg);
+            }
+        }
+
+        @media (max-width:$mobile) {
+            padding-left: 0;
+
+            span {
+                font-size: 0;
+                line-height: 0;
+            }
+
+            &::after {
+                display: none;
+            }
+
+            &::before {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    &__dropdown {
+        min-width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: calc(100% + 5px);
+        right: 0;
+        background-color: var(--white-color);
+        opacity: 0;
+        transform: translateY(20px);
+        visibility: hidden;
+        transition: opacity $transitionSpeed $transitionFunction,
+            visibility $transitionSpeed $transitionFunction,
+            transform $transitionSpeed $transitionFunction;
+
+        &.is-open {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        @media (max-width:$mobile) {
+            right: -20px;
+            transform: translateY(20px);
+        }
+    }
+
+    &__item {
+        color: var(--blue-color);
+
+        &.active {
+            background-color: var(--black-secondary-color);
+            color: var(--white-color);
+            pointer-events: none;
+            cursor: default;
+        }
+    }
+
+    &__link {
+        width: 100%;
+        padding: 7px 20px;
+        font-size: 16px;
+
+        @media (max-width:$mobile) {
+            font-size: 14px;
+            padding: 5px 15px;
+        }
+    }
+}

@@ -1,7 +1,7 @@
 .our-prices {
     background-color: #12161C;
     padding: 14px 0 15px;
-
+    overflow-x: auto;
     &__list {
         display: flex;
         align-items: center;
@@ -9,10 +9,10 @@
 
     &__item {
         font-size: 16px;
-
+        display: flex;
+        align-items: center;
         span {
-            margin-left: 3px;
-            display: inline-block;
+            margin-left: 5px;
         }
 
         &:not(:first-child) {
@@ -38,5 +38,9 @@
                 color: var(--red-color);
             }
         }
+    }
+    @media (max-width:$md1300) {
+        position: relative;
+        z-index: 100;
     }
 }

@@ -8,13 +8,15 @@
 @import "settings";
 @import "common";
 
+// small components
+@import "./components/logo";
+@import "./components/nav";
+@import "./components/search";
+@import "./components/select-lang";
+
 
 // big components
 @import "./components/our-prices";
 @import "./components/header";
 @import "./components/hero";
 @import "./components/footer";
-
-
-
-// small components

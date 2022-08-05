@@ -1,0 +1,9 @@
+.logo {
+
+    &__img {
+        max-width: none;
+        @media (max-width:$smallTablet){
+             width: 120px; 
+        }
+    }
+}
