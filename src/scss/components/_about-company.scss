@@ -68,12 +68,17 @@
     }
 
     @media (max-width:$tablet) {
-     padding-top: 50px;
+        padding-top: 75px;
     }
 }
 
 .about-company-item {
-
+    &__img{
+        border-radius: 10px;
+        img{
+            border-radius: 10px;
+        }
+    }
     &__name {
         margin-top: 35px;
         font-weight: 700;

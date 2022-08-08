@@ -9,7 +9,9 @@
     @include adaptiveValue("font-size", 45, 20);
     line-height: math.div(55, 45);
 }
-
+.tac{
+    text-align: center;
+}
 .overlay {
     position: fixed;
     left: 0;

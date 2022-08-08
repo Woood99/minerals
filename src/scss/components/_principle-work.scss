@@ -1,0 +1,115 @@
+.principle-work {
+    padding-top: 120px;
+
+    &__list {
+        margin-top: 60px;
+
+        @media (max-width:$tablet) {
+            margin-top: 45px;
+        }
+    }
+
+    &__item {
+        display: flex;
+
+        &:not(:first-child) {
+            margin-top: 105px;
+        }
+
+        @media (min-width:1025px) {
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+                .principle-work-item__right {
+                    padding-left: 10px;
+                    padding-right: 55px;
+                }
+            }
+        }
+
+        @media (max-width:$tablet) {
+            flex-direction: column;
+
+            &:not(:first-child) {
+                margin-top: 75px;
+            }
+        }
+        @media (max-width:$smallMobile){
+            &:not(:first-child) {
+                margin-top: 50px;
+            } 
+        }
+    }
+
+    @media (max-width:$tablet) {
+        padding-top: 75px;
+    }
+}
+
+.principle-work-item {
+
+    &__left {
+        flex: 0 1 percent(739, 1600);
+        border-radius: 10px;
+
+        img {
+            border-radius: 10px;
+        }
+
+        @media (max-width:$tablet) {
+            flex: none;
+            max-width: 450px;
+        }
+    }
+
+    &__right {
+        padding-left: 55px;
+        flex: 0 1 percent(861, 1600);
+
+        @media (max-width:$tablet) {
+            flex: none;
+            margin-top: 25px;
+            padding-left: 10px;
+        }
+        @media (max-width:$smallTablet){
+             padding-left: 0; 
+        }
+    }
+
+    &__title {
+        position: relative;
+
+        &::before {
+            content: '';
+            height: 32px;
+            width: 4px;
+            background-color: var(--white-color);
+            position: absolute;
+            top: 5px;
+            left: -10px;
+        }
+        @media (max-width:$smallTablet){
+             &::before{
+                display: none;
+             } 
+        }
+    }
+
+    &__descr {
+        margin-top: 20px;
+        @include adaptiveValue("font-size", 20, 14);
+        line-height: math.div(28, 20);
+        @media (max-width:$tablet){
+            margin-top: 15px;
+        }
+    }
+
+    &__btn {
+        margin-top: 35px;
+        @media (max-width:$tablet){
+            margin-top: 15px;
+        }
+        @media (max-width:$mobile){
+             width: 100%; 
+        }
+    }
+}
