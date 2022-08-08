@@ -68,10 +68,7 @@
         @media (max-width:$tablet) {
             flex: none;
             margin-top: 25px;
-            padding-left: 10px;
-        }
-        @media (max-width:$smallTablet){
-             padding-left: 0; 
+            padding-left: 0; 
         }
     }
 
@@ -84,14 +81,14 @@
             width: 4px;
             background-color: var(--white-color);
             position: absolute;
-            top: 5px;
+            top: 8px;
             left: -10px;
         }
-        @media (max-width:$smallTablet){
-             &::before{
-                display: none;
-             } 
-        }
+       @media (max-width:$tablet){
+        &::before{
+            display: none;
+         } 
+       }
     }
 
     &__descr {
@@ -104,6 +101,7 @@
     }
 
     &__btn {
+        text-align: center;
         margin-top: 35px;
         @media (max-width:$tablet){
             margin-top: 15px;
