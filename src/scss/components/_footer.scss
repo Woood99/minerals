@@ -1,0 +1,149 @@
+.footer {
+    color: var(--white-color);
+    background-color: #1C1E21;
+    padding: 75px 0;
+
+    &__cols {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        column-gap: 75px;
+
+        @media (max-width:$tablet) {
+            grid-template-columns: repeat(2, auto);
+            grid-gap: 50px;
+        }
+
+        @media (max-width:$smallMobile) {
+            grid-template-columns: repeat(1, auto);
+        }
+    }
+
+    &__col--1 {
+        margin-top: -25px;
+        max-width: 460px;
+
+        @media (max-width:$tablet) {
+            order: 1;
+        }
+
+        @media (max-width:$smallTablet) {
+            grid-column: 1/-1;
+            max-width: none;
+        }
+    }
+
+    &__col--2 {
+        @media (max-width:$tablet) {
+            order: 3;
+        }
+
+        @media (max-width:$smallTablet) {
+            order: 2;
+        }
+    }
+
+    &__col--3 {
+        @media (max-width:$tablet) {
+            order: 4;
+        }
+
+        @media (max-width:$smallTablet) {
+            order: 3;
+        }
+    }
+
+    &__col--4 {
+        max-width: 365px;
+
+        @media (max-width:$tablet) {
+            order: 2;
+        }
+
+        @media (max-width:$smallTablet) {
+            order: 4;
+            grid-column: 1/-1;
+            max-width: none;
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        @include adaptiveValue("font-size", 22, 18);
+        line-height: math.div(26, 22);
+    }
+    @media (max-width:$tablet){
+        padding: 50px 0;
+    }
+}
+
+.footer-about {
+
+    &__descr {
+        margin-top: 20px;
+        @include adaptiveValue("font-size", 18, 14);
+        line-height: math.div(28, 18);
+    }
+}
+
+.footer-nav {
+
+    &__list {
+        margin-top: 16px;
+    }
+
+    &__link {
+        padding: 16px 0;
+        transition: color $transitionSpeed $transitionFunction;
+        @include adaptiveValue("font-size", 18, 14);
+        line-height: math.div(18 ,18 );
+        &:hover {
+            color: var(--blue-color);
+        }
+        @media (max-width:$mobile){
+             padding: 10px 0; 
+        }
+    }
+}
+
+.footer-contacts {
+    &__inner {
+        margin-top: 24px;
+    }
+
+    &__address {
+        font-weight: 400;
+        @include adaptiveValue("font-size", 18, 14);
+        line-height: math.div(24, 18);
+        font-style: normal;
+    }
+
+    &__phone {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+
+        svg {
+            width: 18px;
+            height: 25px;
+            fill: var(--blue-color);
+        }
+
+        span {
+            margin-left: 17px;
+            font-weight: 500;
+            @include adaptiveValue("font-size", 16, 14);
+            line-height: math.div(27, 16);
+            transition: color $transitionSpeed $transitionFunction;
+        }
+
+        &:hover {
+            span {
+                color: var(--blue-color);
+            }
+        }
+    }
+
+    &__socials {
+        margin-top: 25px;
+    }
+}
