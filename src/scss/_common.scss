@@ -1,8 +1,13 @@
 .title-1 {
-    color: var(--white-color);
     font-weight: 700;
-    @include adaptiveValue("font-size", 58, 30);
+    @include adaptiveValue("font-size", 58, 25);
     line-height: math.div(70, 58);
+}
+
+.title-2 {
+    font-weight: 700;
+    @include adaptiveValue("font-size", 45, 20);
+    line-height: math.div(55, 45);
 }
 
 .overlay {

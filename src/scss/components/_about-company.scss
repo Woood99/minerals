@@ -1,0 +1,99 @@
+.about-company {
+    padding-top: 150px;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width:$smallTablet) {
+            flex-direction: column;
+        }
+    }
+
+    &__img {
+        flex: 0 1 percent(362, 1600);
+
+        @media (max-width:$smallTablet) {
+            flex: auto;
+            display: none;
+        }
+    }
+
+    &__right {
+        margin-left: 90px;
+        flex: 1 1 percent(1238, 1600);
+
+        @media (max-width:$tablet) {
+            margin-left: 30px;
+        }
+
+        @media (max-width:$smallTablet) {
+            flex: auto;
+            margin-left: 0;
+        }
+    }
+
+    &__text {
+        margin-top: 25px;
+
+        p {
+            @include adaptiveValue("font-size", 20, 14);
+            line-height: math.div(28, 20);
+
+            &:not(:first-child) {
+                margin-top: 25px;
+            }
+        }
+
+        @media (max-width:$tablet) {
+            margin-top: 20px;
+        }
+    }
+
+    &__list {
+        margin-top: 75px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 35px;
+
+        @media (max-width:$tablet) {
+            margin-top: 50px;
+        }
+        @media (max-width:$smallTablet){
+             grid-template-columns: repeat(2,1fr); 
+        }
+        @media (max-width:$mobile){
+             grid-template-columns: repeat(1,1fr); 
+        }
+    }
+
+    @media (max-width:$tablet) {
+        padding-top: 75px;
+    }
+}
+
+.about-company-item {
+
+    &__name {
+        margin-top: 35px;
+        font-weight: 700;
+        @include adaptiveValue("font-size", 24, 16);
+        line-height: math.div(30, 24);
+
+        @media (max-width:$tablet) {
+            margin-top: 20px;
+        }
+        @media (max-width:$mobile){
+             margin-top: 10px; 
+        }
+    }
+
+    &__descr {
+        margin-top: 15px;
+        @include adaptiveValue("font-size", 18, 14);
+        line-height: math.div(22, 18);
+        @media (max-width:$mobile){
+            margin-top: 10px; 
+       }
+    }
+}
