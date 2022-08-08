@@ -1,0 +1,93 @@
+.hero {
+    background: linear-gradient(180deg, #5B7BB7 0%, #6196CB 100%);
+    padding: 150px 0;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width:$tablet){
+            flex-direction: column;
+        }
+    }
+
+    &__left {
+        padding-right: 75px;
+        flex: 0 1 percent(967,1600);
+        @media (max-width:$tablet){
+            flex: auto;
+         padding-right: 0;
+        }
+    }
+
+    &__descr {
+        margin-top: 25px;
+        @include adaptiveValue("font-size", 20, 14);
+        line-height: math.div(28, 20);
+
+        @media (max-width:$tablet) {
+            margin-top: 20px;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(auto, 210px));
+        grid-gap: 30px;
+        margin-top: 55px;
+
+        @media (max-width:$tablet) {
+            margin-top: 40px;
+        }
+        @media (max-width:$smallTablet){
+             grid-template-columns: repeat(2,1fr); 
+             grid-gap: 15px;
+        }
+        @media (max-width:$mobile){
+            margin-top: 25px;
+             grid-template-columns: repeat(1,1fr); 
+        }
+    }
+
+    &__item {
+        padding-left: 14px;
+
+        color: var(--periw-gray-color);
+        @include adaptiveValue("font-size", 18, 12);
+        line-height: math.div(20, 18);
+
+        position: relative;
+
+        &::before {
+            content: '';
+            height: 13px;
+            width: 1px;
+            background-color: var(--white-color);
+            position: absolute;
+            top: 2px;
+            left: 0;
+        }
+    }
+
+    &__btn {
+        margin-top: 40px;
+        @media (max-width:$smallTablet){
+             width: 100%;
+             margin-top: 25px; 
+        }
+    }
+
+    &__right {
+        flex: 0 1 percent(633,1600);
+        @media (max-width:$tablet){
+            margin-top: 50px;
+            flex: auto;
+            max-width: 450px;
+            align-self: center;
+        }
+        @media (max-width:$smallTablet){
+             margin-top: 35px; 
+        }
+    }
+    @media (max-width:$tablet){
+        padding: 75px 0;
+    }
+}

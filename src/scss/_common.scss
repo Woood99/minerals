@@ -1,7 +1,9 @@
-.title {}
-
-.subtitle {}
-
+.title-1 {
+    color: var(--white-color);
+    font-weight: 700;
+    @include adaptiveValue("font-size", 58, 30);
+    line-height: math.div(70, 58);
+}
 
 .overlay {
     position: fixed;
