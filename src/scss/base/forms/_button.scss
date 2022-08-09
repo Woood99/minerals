@@ -34,5 +34,8 @@
         @media (max-width:$tablet) {
             font-size: 14px;
         }
+        @media (max-width:$smallTablet){
+             padding: 13px 30px 14px; 
+        }
     }
 }
