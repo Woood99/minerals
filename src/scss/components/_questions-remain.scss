@@ -1,0 +1,201 @@
+.questions-remain {
+    padding: 135px 0;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (max-width:$tablet) {
+            flex-direction: column;
+            align-items: start;
+            justify-content: start;
+        }
+    }
+
+    &__left {
+        max-width: 865px;
+
+        @media (max-width:$tablet) {
+            max-width: 100%;
+        }
+    }
+
+    &__text {
+        margin-top: 35px;
+
+        p {
+            @include adaptiveValue("font-size", 20, 14);
+            line-height: math.div(28, 20);
+
+            &:not(:first-child) {
+                margin-top: 25px;
+            }
+        }
+
+        @media (max-width:$smallTablet) {
+            margin-top: 20px;
+
+            p {
+                &:not(:first-child) {
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+
+    &__feedback {
+        margin-top: 25px;
+        @include adaptiveValue("font-size", 20, 14);
+        line-height: math.div(28, 20);
+
+        span {
+            font-weight: 700;
+        }
+
+        @media (max-width:$smallTablet) {
+            margin-top: 15px;
+        }
+    }
+
+    &__form {
+        margin-left: 60px;
+
+        @media (max-width:$tablet) {
+            margin-top: 35px;
+            margin-left: 0;
+        }
+
+        @media (max-width:$smallTablet) {
+            width: 100%;
+        }
+    }
+
+    @media (max-width:$tablet) {
+        padding: 75px 0;
+    }
+}
+
+.feedback-form {
+
+    &__row--inputs {
+        display: flex;
+
+        label {
+            width: calc(50% - (15px/2));
+
+            &:not(:first-child) {
+                margin-left: 15px;
+            }
+        }
+
+        .feedback-form__input {
+            border-radius: 10px;
+            background-color: var(--white-color);
+            @include adaptiveValue("font-size", 20, 14);
+            line-height: math.div(28, 20);
+            padding: 10px 20px;
+            border: 1px solid transparent;
+            color: #405267;
+
+            &::placeholder {
+                color: currentColor;
+            }
+
+            &:focus {
+                border: 1px solid var(--blue-color);
+            }
+
+            @media (max-width:$tablet) {
+                width: 100%;
+            }
+        }
+
+        @media (max-width:$mobile) {
+            flex-direction: column;
+
+            label {
+                width: 100%;
+
+                &:not(:first-child) {
+                    margin-left: 0;
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+
+    &__row--textarea {
+        margin-top: 15px;
+        display: block;
+    }
+
+    &__row--footer {
+        margin-top: 22px;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        align-items: center;
+
+        @media (max-width:$tablet) {
+            margin-top: 15px;
+        }
+
+        @media (max-width:$mobile) {
+            grid-template-columns: repeat(1, auto);
+        }
+    }
+
+    &__textarea {
+        width: 100%;
+        border-radius: 10px;
+        background-color: var(--white-color);
+        @include adaptiveValue("font-size", 20, 14);
+        line-height: math.div(28, 20);
+        padding: 10px 20px;
+        border: 1px solid transparent;
+        color: #405267;
+        height: 130px;
+
+        &::placeholder {
+            color: currentColor;
+        }
+
+        &:focus {
+            border: 1px solid var(--blue-color);
+        }
+
+        @media (max-width:$smallTablet) {
+            height: 100px;
+        }
+    }
+
+
+    &__agreement {
+        margin-left: 28px;
+        @include adaptiveValue("font-size", 16, 12);
+        line-height: math.div(20, 16);
+
+        @media (max-width:$mobile) {
+            margin-top: 15px;
+            margin-left: 0;
+        }
+    }
+
+    .just-validate-error-label {
+        margin-top: 5px;
+        color: var(--red-color) !important;
+        @include adaptiveValue("font-size", 18, 14);
+        line-height: math.div(21, 18);
+        font-weight: 500;
+    }
+
+    .just-validate-error-field {
+        border: 1px solid var(--red-color);
+        ;
+    }
+}
+
+.form {
+
+    &__btn {}
+}

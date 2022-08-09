@@ -63,7 +63,7 @@ import {
     getHeaderHeight
 } from './functions/header-height';
 getHeaderHeight();
-window.addEventListener('resize',getHeaderHeight);
+window.addEventListener('resize', getHeaderHeight);
 
 // ========================================================================================
 
@@ -121,14 +121,54 @@ window.addEventListener('resize',getHeaderHeight);
 // ========================================================================================
 
 
-// import { validateForms } from './functions/validate-forms';
-// const rules1 = [...];
+import {
+    validateForms
+} from './functions/validate-forms';
+const feedbackFormRules = [{
+        ruleSelector: '.feedback-form__input--name',
+        rules: [{
+                rule: 'minLength',
+                value: 3,
+                errorMessage: 'Заполните имя!'
+            },
+            {
+                rule: 'required',
+                value: true,
+                errorMessage: 'Заполните имя!'
+            }
+        ]
+    },
+    {
+        ruleSelector: '.feedback-form__input--tel',
+        tel: true,
+        telError: 'Введите корректный телефон',
+        rules: [{
+            rule: 'required',
+            value: true,
+            errorMessage: 'Заполните телефон!'
+        }]
+    },
+    {
+        ruleSelector: '.feedback-form__textarea',
+        rules: [{
+                rule: 'minLength',
+                value: 15,
+                errorMessage: 'Введите минимум 15 символов'
+            },
+            {
+                rule: 'required',
+                value: true,
+                errorMessage: 'Введите сообщение'
+            }
+        ]
+    },
+];
 
-// const afterForm = () => {
-//   console.log('Произошла отправка, тут можно писать любые действия');
-// };
+const afterForm = () => {
+    console.log('Произошла отправка, тут можно писать любые действия');
+};
 
-// validateForms('.form-1', rules1, afterForm);
+validateForms('.feedback-form', feedbackFormRules, afterForm);
 
 
 
