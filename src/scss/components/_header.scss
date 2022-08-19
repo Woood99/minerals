@@ -1,5 +1,6 @@
 .header {
     background-color: $bodyColor;
+    color: var(--white-color);
     &__inner {
         display: flex;
         align-items: center;
@@ -93,6 +94,19 @@
     &__lang {
         margin-left: 15px;
         position: relative;
+    }
+    &.header-about{
+        background-color: transparent;
+        background: url('../img/header-bg.png'), linear-gradient(180deg, #5B7BB7 0%, #3C6494 100%);
+        .header{
+            &__inner{
+                justify-content: start;
+            }
+            &__nav{
+                margin-left: auto;
+                padding-right: 44px;
+            }
+        }
     }
     @media (max-width:$md1300) {
         position: relative;

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {
+"title": "О компании"
+})
+
+<body class="page__body page__body--secondary">
+    <div class="site-container">
+        <div class="overlay" data-menu-overlay></div>
+        @include('partials/header-about.html')
+        <main class="main">
+            @include('partials/hero-about.html')
+            @include('partials/contacts.html')
+        </main>
+        @include('partials/footer.html')
+    </div>
+    @include('partials/popup.html')
+</body>
+
+
+</html>

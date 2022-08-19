@@ -1,0 +1,62 @@
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+
+    &__item {
+        color: rgba(#fff, 0.5);
+        position: relative;
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        line-height: math.div(18, 14);
+
+        @media (max-width:$tablet) {
+            font-size: 12px;
+        }
+
+        a {
+            transition: color $transitionSpeed $transitionFunction;
+        }
+
+        svg {
+            fill: currentColor;
+            width: 10px;
+            height: 6px;
+            transform: rotate(-90deg);
+            margin-left: 11px;
+
+            @media (max-width:$tablet) {
+                width: 8px;
+                height: 7px;
+                margin-left: 6px;
+            }
+        }
+
+        margin-right: 11px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:nth-last-child(2) {
+            svg {
+                fill: #fff;
+            }
+        }
+
+        &:last-child {
+            color: var(--white-color);
+        }
+
+        &:hover {
+            a {
+                color: var(--blue-color);
+            }
+        }
+
+        @media (max-width:$tablet) {
+            margin-right: 6px;
+        }
+    }
+}

@@ -62,6 +62,13 @@ a {
 
 
 
+// =============== Class reset ===============
+.list-reset {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 
 
 
@@ -105,20 +112,4 @@ a {
     margin: 0 auto;
     padding: 0 ($containerOffset + px);
     max-width: $containerWidth + px;
-}
-
-
-
-
-
-
-
-
-
-
-// =============== Class reset ===============
-.list-reset {
-    list-style: none;
-    margin: 0;
-    padding: 0;
 }

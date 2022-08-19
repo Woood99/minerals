@@ -1,0 +1,49 @@
+.hero-secondary {
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .container {
+        position: relative;
+    }
+
+    &__breadcrumbs {
+        position: absolute;
+        top: 18px;
+        left: 15px;
+
+        @media (max-width:$tablet) {
+            top: 15px;
+        }
+    }
+
+    &__inner {
+        text-align: center;
+        max-width: 815px;
+        margin: 0 auto;
+        padding-top: 110px;
+        padding-bottom: 135px;
+
+        @media (max-width:$tablet) {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        @include adaptiveValue("font-size", 58, 32);
+        line-height: math.div(58, 58);
+        color: var(--white-color);
+    }
+
+    &__descr {
+        margin-top: 30px;
+        @include adaptiveValue("font-size", 20, 14);
+        line-height: math.div(28, 20);
+        color: var(--white-color);
+
+        @media (max-width:$tablet) {
+            margin-top: 20px;
+        }
+    }
+}
