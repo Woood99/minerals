@@ -13,7 +13,12 @@
             height: 60px; 
         }
     }
-
+    &__logo{
+        @media (max-width:$md1300){
+              position: relative;
+              z-index: 101;
+        }
+    }
     &__nav {
         margin: 0 15px;
 
@@ -105,6 +110,9 @@
             &__nav{
                 margin-left: auto;
                 padding-right: 44px;
+                @media (max-width:$md1300){
+                      padding-right: 0;
+                }
             }
         }
     }

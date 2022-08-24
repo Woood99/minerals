@@ -1,0 +1,70 @@
+.company-principles {
+    padding-bottom: 150px;
+
+    &__title {}
+
+    &__list {
+        margin-top: 85px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 35px;
+
+        @media (max-width:$tablet) {
+            margin-top: 35px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 25px;
+        }
+
+        @media (max-width:$smallTablet) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &__item {
+        background-color: #F9FAFD;
+        border-radius: 10px;
+        padding: 35px 30px;
+
+        @media (max-width:$tablet) {
+            padding: 20px;
+        }
+    }
+    @media (max-width:$tablet){
+        padding-bottom: 75px;
+    }
+}
+
+.company-principles-item {
+    svg {
+        width: 75px;
+        height: 75px;
+        fill: #1D80EB;
+
+        @media (max-width:$tablet) {
+            width: 60px;
+            height: 60px;
+        }
+
+        @media (max-width:$smallTablet) {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    &__title {
+        margin-top: 20px;
+        font-weight: 700;
+        @include adaptiveValue("font-size", 22, 16);
+        line-height: math.div(32, 22);
+
+        @media (max-width:$tablet) {
+            margin-top: 15px;
+        }
+    }
+
+    &__descr {
+        margin-top: 10px;
+        @include adaptiveValue("font-size", 20, 14);
+        line-height: math.div(26, 20);
+    }
+}
