@@ -69,8 +69,12 @@ window.addEventListener('resize', getHeaderHeight);
 
 
 // Подключение плагина кастом-скролла
-// import 'simplebar';
-
+import 'simplebar';
+if (document.querySelector('.simplebar-primary')){
+    document.querySelectorAll('.simplebar-primary').forEach(el => {
+        const simplebar = new SimpleBar(el);
+    });
+}
 
 // ========================================================================================
 
@@ -240,5 +244,6 @@ import "./functions/dynamic-adapt";
 
 // Фикс фулскрин-блоков
 import './functions/fix-fullheight';
+import SimpleBar from 'simplebar';
 
 // ========================================================================================

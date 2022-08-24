@@ -1,6 +1,6 @@
 .about-company {
     padding-top: 150px;
-
+    padding-bottom: 150px;
     &__top {
         display: flex;
         justify-content: space-between;
@@ -69,6 +69,38 @@
 
     @media (max-width:$tablet) {
         padding-top: 75px;
+        padding-bottom: 75px;
+    }
+    &.about-company-simplebar{
+        .about-company{
+            &__left{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                @media (max-width:$smallTablet){
+                    align-items: start;
+                }
+            }
+            &__right{
+                margin-left: 64px;
+                flex: 1 1 percent(1256, 1600);
+                @media (max-width:$smallTablet){
+                     flex: auto;
+                     margin-left: 0; 
+                     margin-top: 20px; 
+                }
+            }
+            &__img{
+                max-width: 241px;
+            }
+            &__text{
+                margin-top: 0;
+                max-height: 420px;
+                overflow-y: auto;
+            }
+
+        }
     }
 }
 
@@ -100,5 +132,36 @@
         @media (max-width:$mobile){
             margin-top: 10px; 
        }
+    }
+}
+
+
+.simplebar-primary{
+    .simplebar-track.simplebar-vertical {
+        background-color: #E8ECF1;
+        width: 4px;
+    }
+    
+    .simplebar-content-wrapper {
+        padding-right: 15px;
+    }
+    
+    .simplebar-scrollbar::before {
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 1;
+        background-color: #203E75;
+        border-radius: 0;
+    }
+    
+    .simplebar-track.simplebar-vertical .simplebar-scrollbar::before {
+        top: 0;
+        bottom: 0;
+    }
+    
+    .simplebar-scrollbar.simplebar-visible::before {
+        opacity: 1;
     }
 }
