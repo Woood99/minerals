@@ -194,7 +194,7 @@ validateForms('.feedback-form', feedbackFormRules, afterForm);
 // Сниппет(HTML): gallery
 
 // Подключение базового набора функционала
-// import lightGallery from 'lightgallery';
+import lightGallery from 'lightgallery';
 
 // Плагины
 // lgZoom, lgAutoplay, lgComment, lgFullscreen, lgHash, lgPager, lgRotate, 
@@ -202,14 +202,13 @@ validateForms('.feedback-form', feedbackFormRules, afterForm);
 // import lgFullscreen from 'lightgallery/plugins/fullscreen/lg-fullscreen.min.js';
 
 // Запуск
-// const galleries = document.querySelectorAll('#galleryID');
-// galleries.forEach(gallery => {
-//     lightGallery(gallery, {
-//         // plugins: [lgFullscreen],
-//         licenseKey: '7EC452A9-0CFD441C-BD984C7C-17C8456E',
-//         speed: 500,
-//     });
-// });
+const galleries = document.querySelectorAll('#certificates-gallery');
+galleries.forEach(gallery => {
+    lightGallery(gallery, {
+        licenseKey: '7EC452A9-0CFD441C-BD984C7C-17C8456E',
+        speed: 500,
+    });
+});
 
 
 
