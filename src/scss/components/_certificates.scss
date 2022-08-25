@@ -1,0 +1,50 @@
+.certificates {
+    &__title {}
+
+    &__inner {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 25px;
+
+        @media (max-width:$tablet) {
+            margin-top: 30px;
+            grid-gap: 15px;
+        }
+
+        @media (max-width:$smallTablet) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__link {
+        display: block;
+
+        @media (max-width:$smallTablet) {
+            margin: 0 auto;
+            max-width: 400px;
+        }
+
+        @media (max-width:$mobile) {
+            max-width: 320px;
+        }
+    }
+
+    &__img {
+        display: block;
+    }
+
+    &__text {
+        margin-top: 45px;
+        @include adaptiveValue("font-size", 20, 14);
+        line-height: math.div(28, 20);
+
+        @media (max-width:$tablet) {
+            margin-top: 30px;
+        }
+
+        @media (max-width:$smallTablet) {
+            text-align: center;
+        }
+    }
+}

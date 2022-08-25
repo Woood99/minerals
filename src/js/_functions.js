@@ -171,8 +171,9 @@ const feedbackFormRules = [{
 const afterForm = () => {
     console.log('Произошла отправка, тут можно писать любые действия');
 };
-
-validateForms('.feedback-form', feedbackFormRules, afterForm);
+if (document.querySelector('.feedback-form')) {
+    validateForms('.feedback-form', feedbackFormRules, afterForm);
+}
 
 
 

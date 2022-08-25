@@ -19,7 +19,7 @@
         @media (min-width:1025px) {
             &:nth-child(even) {
                 flex-direction: row-reverse;
-                .principle-work-item__right {
+                .card__right {
                     padding-left: 10px;
                     padding-right: 55px;
                 }
@@ -45,7 +45,7 @@
     }
 }
 
-.principle-work-item {
+.card {
 
     &__left {
         flex: 0 1 percent(739, 1600);
