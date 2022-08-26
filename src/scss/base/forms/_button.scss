@@ -34,8 +34,35 @@
         @media (max-width:$tablet) {
             font-size: 14px;
         }
-        @media (max-width:$smallTablet){
-             padding: 13px 30px 14px; 
+
+        @media (max-width:$smallTablet) {
+            padding: 13px 30px 14px;
+        }
+    }
+
+    &-secondary {
+        color: var(--white-color);
+        background-color: #203E75;
+        border-radius: 0;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: math.div(21, 18);
+        padding: 16px 27px 19px;
+
+        &:focus {
+            background-color: var(--blue-color);
+        }
+
+        &:hover {
+            background-color: var(--blue-color);
+        }
+
+        @media (max-width:$tablet) {
+            font-size: 14px;
+        }
+
+        @media (max-width:$smallTablet) {
+            padding: 13px 30px 14px;
         }
     }
 }

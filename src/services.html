@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {
+"title": "Наши услуги"
+})
+
+<body class="page__body page__body--secondary">
+    <div class="site-container">
+        <div class="overlay" data-menu-overlay></div>
+        @include('partials/header-services.html')
+        <main class="main">
+            @include('partials/hero-services.html')
+            @include('partials/our-services.html')
+            @include('partials/contacts.html')
+        </main>
+        @include('partials/footer.html')
+    </div>
+    @include('partials/popup.html')
+</body>
+
+
+</html>
