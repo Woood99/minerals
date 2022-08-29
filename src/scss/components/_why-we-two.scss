@@ -1,0 +1,67 @@
+.why-we-two {
+    margin-top: 100px;
+    margin-bottom: 35px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width:$tablet) {
+            flex-direction: column;
+        }
+    }
+
+    &__left {
+        flex: 0 1 710px;
+
+        @media (max-width:$tablet) {
+            flex: auto;
+        }
+    }
+
+    &__title {}
+
+    &__benefits {
+        margin-top: 45px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 35px;
+
+        @media (max-width:$tablet) {
+            margin-top: 30px;
+            grid-gap: 25px;
+        }
+
+        @media (max-width:$smallTablet) {
+            grid-template-columns: repeat(1, 1fr);
+            margin-top: 20px;
+        }
+    }
+
+    &__right {
+        padding-left: 75px;
+        flex: 0 1 percent(785, 1600);
+        display: flex;
+        align-items: center;
+
+        @media (max-width:$tablet) {
+            flex: auto;
+            max-width: 450px;
+            display: block;
+            padding-left: 0;
+            margin-top: 35px;
+        }
+
+        @media (max-width:$smallTablet) {
+            margin-top: 25px;
+        }
+
+        @media (max-width:$mobile) {
+            max-width: none;
+        }
+    }
+
+    @media (max-width:$tablet) {
+        margin-top: 50px;
+    }
+}

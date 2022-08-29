@@ -1,0 +1,47 @@
+.company-descr {
+    margin-top: 40px;
+
+    &__title {
+        @include adaptiveValue("font-size", 32, 18);
+        line-height: math.div(40, 32);
+        color: #141414;
+        font-weight: 700;
+    }
+
+    &__text {
+        margin-top: 15px;
+        color: #405267;
+
+        p {
+            @include adaptiveValue("font-size", 20, 14);
+            line-height: math.div(28, 20);
+
+            &:not(:first-child) {
+                margin-top: 15px;
+            }
+        }
+        &--2{
+            margin-top: 50px;
+            @media (max-width:$tablet){
+                margin-top: 25px;
+            }
+        }
+    }
+
+    &__benefits {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 25px;
+        @media (max-width:$tablet){
+            margin-top: 20px;
+            grid-template-columns: repeat(2,1fr);
+        }
+        @media (max-width:$smallTablet){
+             grid-template-columns: repeat(1,1fr); 
+        }
+    }
+    @media (max-width:$tablet){
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,58 @@
+.company-news {
+    padding: 100px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__title {}
+
+    &__list {
+        margin-top: 45px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 38px;
+        column-gap: 38px;
+        row-gap: 35px;
+
+        @media (max-width:$tablet) {
+            margin-top: 30px;
+            column-gap: 30px;
+        }
+
+        @media (max-width:$smallTablet) {
+            column-gap: 15px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width:$mobile) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &__item {}
+
+    &__footer {
+        margin-top: 55px;
+        text-align: center;
+
+        @media (max-width:$tablet) {
+            margin-top: 30px;
+        }
+    }
+
+    &__btn {
+        padding: 16px 55px 19px;
+
+        @media (max-width:$smallTablet) {
+            padding: 13px 35px 14px;
+        }
+
+        @media (max-width:$mobile) {
+            width: 100%;
+        }
+    }
+
+    @media (max-width:$tablet) {
+        padding: 50px 0;
+    }
+}
+

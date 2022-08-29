@@ -1,0 +1,60 @@
+.service-card {
+    margin-top: 100px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width:$tablet) {
+            flex-direction: column;
+        }
+    }
+
+    &__img {
+        flex: 0 1 percent(739, 1600);
+
+        @media (max-width:$tablet) {
+            flex: auto;
+            max-width: 450px;
+        }
+
+        @media (max-width:$mobile) {
+            max-width: none;
+        }
+    }
+
+    &__info {
+        padding-left: 50px;
+        flex: 0 1 percent(861, 1600);
+
+        @media (max-width:$tablet) {
+            padding-left: 0;
+            flex: auto;
+            margin-top: 20px;
+        }
+    }
+
+    &__text {
+        margin-top: 20px;
+        @include adaptiveValue("font-size", 20, 14);
+        line-height: math.div(28, 20);
+
+        p {
+            &:not(:first-child) {
+                margin-top: 25px;
+
+                @media (max-width:$tablet) {
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        @media (max-width:$tablet) {
+            margin-top: 15px;
+        }
+    }
+
+    @media (max-width:$tablet) {
+        margin-top: 50px;
+    }
+}

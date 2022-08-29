@@ -47,4 +47,10 @@
             text-align: center;
         }
     }
+    &--services-card{
+        margin-top: 80px;
+        @media (max-width:$tablet){
+            margin-top: 40px;
+        }
+    }
 }
