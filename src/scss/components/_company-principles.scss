@@ -1,4 +1,5 @@
 .company-principles {
+    padding-top: 150px;
     padding-bottom: 150px;
 
     &__title {}
@@ -29,7 +30,9 @@
             padding: 20px;
         }
     }
-    @media (max-width:$tablet){
+
+    @media (max-width:$tablet) {
+        padding-top: 75px;
         padding-bottom: 75px;
     }
 }

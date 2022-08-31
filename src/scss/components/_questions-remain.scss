@@ -15,7 +15,6 @@
 
     &__left {
         max-width: 865px;
-
         @media (max-width:$tablet) {
             max-width: 100%;
         }
@@ -60,10 +59,11 @@
 
     &__form {
         margin-left: 60px;
-
+        min-width: 500px;
         @media (max-width:$tablet) {
             margin-top: 35px;
             margin-left: 0;
+            min-width:auto;
         }
 
         @media (max-width:$smallTablet) {
@@ -168,7 +168,9 @@
             height: 100px;
         }
     }
-
+    &__input{
+        width: 100%;
+    }
 
     &__agreement {
         margin-left: 28px;
