@@ -37,16 +37,13 @@
 
         &:last-child {
             margin-right: 0;
+            color: var(--white-color);
         }
 
         &:nth-last-child(2) {
             svg {
                 fill: #fff;
             }
-        }
-
-        &:last-child {
-            color: var(--white-color);
         }
 
         &:hover {
@@ -57,6 +54,20 @@
 
         @media (max-width:$tablet) {
             margin-right: 6px;
+        }
+    }
+    &--secondary{
+        margin-top: 18px;
+        .breadcrumbs{
+            &__item{
+                color: rgba(#3C3C3C,0.5);
+                &:last-child {
+                    color: #1D80EB;
+                }
+                &:nth-last-child(2) svg {
+                    fill: #1D80EB;
+                }
+            }
         }
     }
 }

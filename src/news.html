@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {
+"title": "Наши услуги"
+})
+
+<body class="page__body page__body--secondary">
+    <div class="site-container">
+        <div class="overlay" data-menu-overlay></div>
+        @include('partials/header-main.html')
+        <main class="main">
+            <ul class="container breadcrumbs--secondary breadcrumbs list-reset">
+                <li class="breadcrumbs__item">
+                    <a href="./index.html">
+                        Главная
+                    </a>
+                    <svg>
+                        <use xlink:href="img/sprite.svg#arrow-down"></use>
+                    </svg>
+                </li>
+                <li class="breadcrumbs__item">
+                    <a href="./index.html">
+                        Новости
+                    </a>
+                    <svg>
+                        <use xlink:href="img/sprite.svg#arrow-down"></use>
+                    </svg>
+                </li>
+                <li class="breadcrumbs__item">
+                    Буровые работы
+                </li>
+            </ul>
+            @include('partials/news.html')
+        </main>
+        @include('partials/footer.html')
+    </div>
+    @include('partials/popup.html')
+</body>
+
+
+</html>

@@ -104,9 +104,11 @@
         @include adaptiveValue("font-size", 24, 16);
         line-height: math.div(26, 24);
         color: #141414;
+        display: block;
     }
 
     &__descr {
+        display: block;
         margin-top: 12px;
         font-weight: 400;
         @include adaptiveValue("font-size", 18, 13);
@@ -116,5 +118,143 @@
 
     &--white {
         background-color: var(--white-color);
+    }
+
+    &--water {
+        background-color: #F2F6FB;
+    }
+
+    &--secondary {
+        display: flex;
+
+        .news-card {
+            &__img {
+                flex: 0 1 percent(408, 1079);
+
+                img {
+                    height: 100%;
+                }
+            }
+
+            &__title {
+                @include adaptiveValue("font-size", 36, 22);
+            }
+
+            &__descr {
+                @include adaptiveValue("font-size", 20, 14);
+            }
+
+            &__info {
+                flex: 0 1 percent(671, 1079);
+
+                @media (max-width:$smallTablet) {
+                    padding: 0;
+                    padding-top: 15px;
+                }
+            }
+
+            &__time {
+                padding: 5px 6px;
+                background-color: #fff;
+                display: inline-block;
+            }
+        }
+
+        @media (max-width:$smallTablet) {
+            flex-direction: column;
+        }
+    }
+
+    &--small {
+        display: flex;
+
+        .news-card {
+            &__img {
+                flex: 0 1 percent(199, 526);
+
+                img {
+                    height: 100%;
+                }
+
+                @media (max-width:$md1300) {
+                    max-width: 200px;
+                }
+            }
+
+            &__info {
+                flex: 0 1 percent(327, 526);
+                padding: 20px 30px 30px;
+
+                @media (max-width:$tablet) {
+                    padding: 20px;
+                }
+
+                @media (max-width:$smallTablet) {
+                    padding: 0;
+                    padding-left: 20px;
+                }
+            }
+
+            &__time {
+                padding: 5px 6px;
+                background-color: #fff;
+                display: inline-block;
+            }
+
+            &__title {
+                margin-top: 6px;
+                font-weight: 700;
+                @include adaptiveValue("font-size", 22, 16);
+                line-height: math.div(26, 22);
+            }
+
+            &__descr {
+                margin-top: 9px;
+            }
+        }
+    }
+
+    &--very-small {
+        display: flex;
+
+        .news-card {
+            &__img {
+                flex: 0 1 percent(114, 347);
+
+                img {
+                    height: 100%;
+                }
+
+                @media (max-width:$md1300) {
+                    max-width: 200px;
+                }
+            }
+
+            &__info {
+                flex: 0 1 percent(214, 347);
+                padding: 0;
+                padding-left: 19px;
+            }
+
+            &__time {
+                margin-top: 10px;
+                padding: 5px 6px;
+                background-color: #F1F4F8;
+                display: inline-block;
+            }
+
+            &__title {
+                margin: 0;
+                font-weight: 700;
+                @include adaptiveValue("font-size", 18, 14);
+                line-height: math.div(24, 18);
+            }
+
+            &__descr {
+                margin-top: 10px;
+                @include adaptiveValue("font-size", 14, 12);
+                line-height: math.div(15, 14);
+            }
+        }
     }
 }
